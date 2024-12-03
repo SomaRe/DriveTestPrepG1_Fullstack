@@ -1,0 +1,72 @@
+{
+	"signs_questions": [
+		{
+			"question": 1,
+			"question_type": "Traffic Signs",
+			"options": [
+				"Road slippery when wet",
+				"No right turn permitted",
+				"No left turn permitted",
+				"You must not make a 'U' turn"
+			],
+			"correct_answer": "You must not make a 'U' turn"
+		},
+		{
+			"question": 2,
+			"question_type": "Traffic Signs",
+			"options": [
+				"Hidden intersection ahead",
+				"Winding road",
+				"Road slippery when wet",
+				"Narrow road ahead"
+			],
+			"correct_answer": "Winding road"
+		},
+		{
+			"question": 3,
+			"question_type": "Traffic Signs",
+			"options": [
+				"No entry into the intersection",
+				"This sign means no stopping",
+				"Vehicles approaching from angle shown, must stop",
+				"Need not stop for stop signs in direction of arrows"
+			],
+			"correct_answer": "This sign means no stopping"
+		}
+    ],
+    "rules_questions": [
+		{
+			"question": "In Ontario, there is a seat belt law",
+			"question_type": "Rules of the Road",
+			"options": [
+				"Yes",
+				"No",
+				"Only when driving on an open highway",
+				"Only when driving within a municipality"
+			],
+			"correct_answer": "Yes"
+		},
+		{
+			"question": "If someone is tailgating you, what should you do?",
+			"question_type": "Rules of the Road",
+			"options": [
+				"Move into another lane when it is safe to do so",
+				"Slow down slightly to increase the space in front of your car",
+				"Pull over to let the tailgater pass",
+				"All of the above"
+			],
+			"correct_answer": "All of the above"
+		},
+		{
+			"question": "Failing to stop for a school bus that is unloading passengers will",
+			"question_type": "Rules of the Road",
+			"options": [
+				"Result in a one year jail sentence",
+				"Cost you 6 demerit points and a fine of up to $1000",
+				"Get you a warning and a fine of $100",
+				"Result in retaking your road test"
+			],
+			"correct_answer": "Cost you 6 demerit points and a fine of up to $1000"
+		}
+    ]
+}
