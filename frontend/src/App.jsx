@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Quiz from "./components/Quiz";
 import Stats from "./components/Stats";
 import ProtectedRoute from "./components/ProtectedRoute";
+import QuizDetails from "./components/QuizDetails";
 
 function App() {
   const [auth, setAuth] = useState(localStorage.getItem("token") || "");
@@ -87,6 +88,14 @@ function App() {
         <Route
           path="*"
           element={<Navigate to={auth ? "/" : "/login"} replace />}
+        />
+        <Route
+          path="/quiz-details/:sessionId"
+          element={
+            <ProtectedRoute auth={auth}>
+              <QuizDetails />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </Router>

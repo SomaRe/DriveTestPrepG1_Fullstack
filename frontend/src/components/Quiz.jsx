@@ -54,29 +54,29 @@ function Quiz() {
     };
   };
 
-const submitQuizResults = async (results) => {
-  try {
-    const answersData = questions.map(q => ({
-      question_id: q.id,
-      user_answer: answers[q.id],
-      is_correct: answers[q.id] === q.correct_answer
-    }));
-
-    await axios.post(`${config.API_URL}/api/quiz/submit`, 
-      { answers: answersData },
-      { headers: { Authorization: `Bearer ${token}` }}
-    );
-  } catch (error) {
-    console.error('Error submitting quiz:', error);
-  }
+  const submitQuizResults = async (results) => {
+    try {
+        const answersData = questions.map(q => ({
+            question_id: q.id,
+            user_answer: answers[q.id],
+            is_correct: answers[q.id] === q.correct_answer
+        }));
+        const response = await axios.post(
+            `${config.API_URL}/api/quiz/submit`,
+            { answers: answersData },
+            { headers: { Authorization: `Bearer ${token}` }}
+        );
+        return response.data.session_id; // Assume backend returns session ID
+    } catch (error) {
+        console.error('Error submitting quiz:', error);
+    }
 };
 
-// Update handleSubmit function
 const handleSubmit = async () => {
-  const results = calculateResults();
-  setResults(results);
-  setCompleted(true);
-  await submitQuizResults(results);
+    const results = calculateResults();
+    const sessionId = await submitQuizResults(results);
+    setResults({...results, sessionId});
+    setCompleted(true);
 };
 
   const handleTryAgain = () => {
@@ -133,6 +133,9 @@ const handleSubmit = async () => {
             <div className="flex justify-center gap-4 mt-6">
               <button className="btn btn-primary" onClick={handleTryAgain}>
                 Try Again
+              </button>
+              <button className="btn btn-info" onClick={() => navigate(`/quiz-details/${results.sessionId}`)}>
+                  View Details
               </button>
               <button className="btn" onClick={() => navigate("/")}>
                 Return Home

@@ -98,3 +98,33 @@ def get_quiz_history():
         'total': s.total_questions,
         'percentage': (s.total_score / s.total_questions) * 100 if s.total_questions else 0
     } for s in sessions]), 200
+
+@api_bp.route('/quiz/session/<int:session_id>', methods=['GET'])
+@jwt_required()
+def get_quiz_session_details(session_id):
+    user_id = get_jwt_identity()
+    session = QuizSession.query.filter_by(id=session_id, user_id=user_id).first()
+    
+    if not session:
+        return jsonify({"msg": "Session not found"}), 404
+    
+    attempts = QuizAttempt.query.filter_by(session_id=session_id).all()
+    
+    details = {
+        'id': session.id,
+        'date': session.start_time,
+        'total_questions': session.total_questions,
+        'total_score': session.total_score,
+        'attempts': [{
+            'question_id': attempt.question_id,
+            'user_answer': attempt.user_answer,
+            'is_correct': attempt.is_correct,
+            'question': Question.query.get(attempt.question_id).question,
+            'correct_answer': Question.query.get(attempt.question_id).correct_answer,
+            'options': Question.query.get(attempt.question_id).options,
+            'question_type': Question.query.get(attempt.question_id).question_type,
+            'image_path': Question.query.get(attempt.question_id).image_path
+        } for attempt in attempts]
+    }
+    
+    return jsonify(details)

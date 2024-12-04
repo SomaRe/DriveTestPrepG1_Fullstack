@@ -17,6 +17,16 @@ def create_app():
     app = Flask(__name__,
                 static_folder='../frontend/dist',
                 static_url_path='')
+    
+    # Add CORS configuration for development
+    if app.debug:
+        CORS(app, resources={
+            r"/api/*": {"origins": "http://localhost:5173"},  # Vite's default port
+            r"/auth/*": {"origins": "http://localhost:5173"},
+            r"/static/*": {"origins": "http://localhost:5173"}
+        })
+    else:
+        CORS(app)  # Production settings
 
     # Configure app
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
