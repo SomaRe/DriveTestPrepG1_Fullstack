@@ -951,7 +951,7 @@
 				"Slow down, proceed when the way is clear",
 				"Stop, proceed only when the signal turns green and when the way is clear"
 			],
-			"correct_answer": "Stop, proceed when the way is clear"
+			"correct_answer": "Stop, proceed only when the signal turns green and when the way is clear"
 		},
 		{
 			"question": "If you are involved in a reportable accident how soon must you make a report to your nearest provincial or municipal police officer?",
@@ -1046,7 +1046,7 @@
 				"1 passenger aged 19 or under (no restrictions for passengers the age of 20 and over)",
 				"2 passengers aged 19 or under"
 			],
-			"correct_answer": "3 passengers aged 19 or under"
+			"correct_answer": "1 passenger aged 19 or under (no restrictions for passengers the age of 20 and over)"
 		},
 		{
 			"question": "If you are a teenage driver with your G2 licence for 6 months and until you obtain your full G licence or turn 20, how many passengers are you allowed to carry between midnight and 5 a.m.?",
@@ -1057,10 +1057,10 @@
 				"1 passenger aged 19 or under",
 				"2 passengers aged 19 or under"
 			],
-			"correct_answer": "1 passenger aged 19 or under"
+			"correct_answer": "3 passengers aged 19 or under (no restrictions for passengers the age of 20 and over)"
 		},
 		{
-			"question": "A“No Parking” sign at a certain location means",
+			"question": "A “No Parking” sign at a certain location means",
 			"question_type": "Rules of the Road",
 			"options": [
 				"You may stop here if the driver remains in the vehicle",
@@ -1211,7 +1211,7 @@
 				"If the licence is not needed for business reasons",
 				"The Ministry is not permitted to suspend a licence before the 15-point level is reached"
 			],
-			"correct_answer": "If a driver does not have at least 5 years driving experience"
+			"correct_answer": "If a driver fails to give satisfactory reasons why their licence should not be suspended"
 		},
 		{
 			"question": "A “School Bus”, with red signal lights flashing, is stopped on a highway that has no median strip. What does the law require you to do when meeting or overtaking the bus?",
@@ -1459,7 +1459,7 @@
 				"Reduce to 5 points",
 				"None of the above"
 			],
-			"correct_answer": "7 Points"
+			"correct_answer": "Reduce to 7 points"
 		},
 		{
 			"question": "When approaching an intersection where a traffic signal light is red and a policeman motions you to go through, you should",
@@ -1521,7 +1521,7 @@
 				"Sound horn and pass with caution",
 				"Pass on the left side of the streetcar"
 			],
-			"correct_answer": "Stop at least 2 metres behind the safety island"
+			"correct_answer": "Pass with caution"
 		},
 		{
 			"question": "When getting out of your car on a busy street you should open your door",
@@ -1632,7 +1632,7 @@
 				"Answer the phone if there are no police around",
 				"Turn it off; it is illegal to talk on the cellular while driving"
 			],
-			"correct_answer": "Turn it off; it is illegal to talk on the cellular while driving"
+			"correct_answer": "Let your voice mail service take the call and check your messages when you are parked"
 		},
 		{
 			"question": "Snow tires are good for",
@@ -1854,7 +1854,7 @@
 			"question": "Under the Criminal Code, if you are caught driving while your licence is suspended, your vehicle will be impounded for?",
 			"question_type": "Rules of the Road",
 			"options": ["1 year", "6 months", "45 days", "30 days"],
-			"correct_answer": "1 year"
+			"correct_answer": "45 days"
 		},
 		{
 			"question": "When taking any medication, you should",
@@ -1871,12 +1871,12 @@
 			"question": "What should you do if your vehicle becomes disabled on the highway?",
 			"question_type": "Rules of the Road",
 			"options": [
-				"Park with all four wheels off the travelled highway",
+				"Park with all four wheels off the travelled highway, if possible",
 				"Stop where you are",
 				"Stop in the right lane",
 				"Stop in the left lane"
 			],
-			"correct_answer": "Park with all four wheels off the travelled highway"
+			"correct_answer": "Park with all four wheels off the travelled highway, if possible"
 		},
 		{
 			"question": "A defensive driver will",
@@ -1909,7 +1909,7 @@
 				"One car length behind the other vehicle",
 				"Five car lengths behind the other vehicle"
 			],
-			"correct_answer": "Two car lengths behind the other vehicle"
+			"correct_answer": "Three car lengths behind the other vehicle"
 		},
 		{
 			"question": "When driving a motor vehicle on the highway at night, you should use low beam headlights (dim lights) when",
@@ -1920,7 +1920,7 @@
 				"Another driver dims his lights",
 				"Blinded by the headlights of an approaching vehicle"
 			],
-			"correct_answer": "Approaching an intersection"
+			"correct_answer": "Meeting or following another vehicle"
 		},
 		{
 			"question": "What must a driver do before entering a highway from a private road or driveway?",
@@ -1976,7 +1976,7 @@
 				"Snow or ice on the road",
 				"Driving too fast"
 			],
-			"correct_answer": "Over-inflated tires"
+			"correct_answer": "Driving too fast"
 		},
 		{
 			"question": "Roadways are most slippery",
@@ -2020,7 +2020,7 @@
 				"How much gas you will save",
 				"If they are following at a safe distance"
 			],
-			"correct_answer": "How fast they can react to obstacles"
+			"correct_answer": "If they are following at a safe distance"
 		},
 		{
 			"question": "When approaching a construction area, drivers should",
