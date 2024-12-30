@@ -11,6 +11,8 @@ def get_all_questions():
     questions = Question.query.all()
     output = []
     for q in questions:
+        shuffled_options = q.options.copy()
+        random.shuffle(shuffled_options)
         output.append({
             "id": q.id,
             "question_type": q.question_type,
@@ -39,6 +41,8 @@ def get_random_quiz():
     
     output = []
     for q in all_questions:
+        shuffled_options = q.options.copy()
+        random.shuffle(shuffled_options)
         question_data = {
             "id": q.id,
             "question_type": q.question_type,
