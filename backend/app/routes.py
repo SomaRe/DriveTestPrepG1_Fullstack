@@ -17,7 +17,7 @@ def get_all_questions():
             "id": q.id,
             "question_type": q.question_type,
             "question": q.question,
-            "options": q.options,
+            "options": shuffled_options,
             "correct_answer": q.correct_answer
         })
     return jsonify(output), 200
@@ -47,7 +47,7 @@ def get_random_quiz():
             "id": q.id,
             "question_type": q.question_type,
             "question": q.question,
-            "options": q.options,
+            "options": shuffled_options,
             "correct_answer": q.correct_answer
         }
         
