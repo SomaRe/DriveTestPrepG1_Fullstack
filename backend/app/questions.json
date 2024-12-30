@@ -1965,7 +1965,7 @@
 				"Apply brake hard",
 				"Steer in the direction of the skid"
 			],
-			"correct_answer": "Steer in the opposite direction of the skid"
+			"correct_answer": "Steer in the direction of the skid"
 		},
 		{
 			"question": "Most automobile skids are the result of",
