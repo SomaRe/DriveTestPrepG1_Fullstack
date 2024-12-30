@@ -66,7 +66,7 @@ function Quiz() {
             { answers: answersData },
             { headers: { Authorization: `Bearer ${token}` }}
         );
-        return response.data.session_id; // Assume backend returns session ID
+        return response.data.session_id;
     } catch (error) {
         console.error('Error submitting quiz:', error);
     }

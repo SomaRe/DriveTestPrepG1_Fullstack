@@ -83,7 +83,7 @@ def submit_quiz():
         db.session.add(attempt)
     
     db.session.commit()
-    return jsonify({'msg': 'Quiz submitted successfully'}), 200
+    return jsonify({'msg': 'Quiz submitted successfully', 'session_id': session.id}), 200
 
 @api_bp.route('/quiz/history', methods=['GET'])
 @jwt_required()
